@@ -46,13 +46,44 @@ SW LifeCycle 전반을 책임지는 엔지니어로서 설계부터 운영 및 �
     </ul>
   </ul>
 
+  
+  <hr>
+<h4>🧪 n8n 워크플로우 자동화 플랫폼 구축</h4>
+<ul class="my__list">
+  <li>🔑 상세설명</li>
+  <ul>
+    <li>
+      n8n을 Webhook Pod / Workflow Pod / Main Pod을 분리 구성하고,<br>
+      AWS RDS 및 ElastiCache를 연동하여 상태 관리 및 실행 안정성 확보
+    </li>
+    <li>
+      Community Edition의 멀티테넌시 및 접근 제어 한계를 보완하기 위해,<br>
+      웹 인터페이스를 통해 팀 단위로 독립적인 n8n 인스턴스를 생성·관리할 수 있는 구조 설계
+    </li>
+    <li>
+      각 팀이 독립된 오너십을 가지고 운영할 수 있도록 네임스페이스 단위 리소스 분리 및 모니터링 체계 구축
+    </li>
+    <li>
+      Webhook Pod은 외부 Public Request를 수용해야 하므로,<br>
+      Path 기반 Allow 정책만 허용하도록 구성하고 전용 Proxy Pod을 통해 내부로 전달하는 보안 아키텍처 설계
+    </li>
+  </ul>
+  <li>🔧 사용기술</li>
+  <ul>
+    <li>
+      node (next.js), golang, typescript, n8n, aws rds, elasticache,<br>
+      eks, terraform,
+    </li>
+  </ul>
+</ul>
+
 
 <hr>
   <h4>🧪 MCP 통합 플랫폼 개발 </h4>
   <ul class="my__list">
     </li>🔑 상세설명 </li>
     <ul>
-      <li>Jira API 및 자체 백오피스 데이터베이스를 MCP 서버와 통합하여, AI 에이전트가 실시간으로 사내 업무 티켓 상태를 확인하고 내부 데이터를 조회할 수 있는 환경 구축</li>
+      <li>Jira API 및 자체 백오피스 데이터베이스를 MCP 서버와 통합하여, 실시간으로 사내 데이터를 확인하고 내부 데이터를 조회할 수 있는 환경 구축</li>
       <li>MCP의 Tool 정의 시 활용되는 JSON Schema와 Zod 라이브러리 간의 호환성 문제를 해결하기 위해 오픈소스를 커스터마이징하여, 런타임 타입 안정성과 스키마 자동 생성 로직 강화</li>
       <li>내부 문서를 임베딩하여 적재된 Vector DB와 코사인 유사도(Cosine Similarity) 기반의 탐색 로직을 MCP 서버에 연동하여 LLM 응답의 정확도와 최신성 확보 </li>
     </ul>
